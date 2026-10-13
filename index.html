@@ -1,16 +1,506 @@
-<!doctype html>
-<!-- ZonaPick RD | Código organizado y firmado por Alex-_-xxvi --><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ZonaPick RD | Juego virtual</title>
-<style>
-:root{--bg:#050b12;--panel:#0b1724;--line:#1b3447;--green:#53ffa1;--mint:#19d782;--text:#f4f8fc;--muted:#9db1c2;--blue:#102b40}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial;background:radial-gradient(ellipse at 80% -5%,#123f45 0,transparent 32%),radial-gradient(ellipse at 0 20%,#10263c 0,transparent 35%),var(--bg)}.wrap{width:min(1180px,92%);margin:auto}header{position:sticky;top:0;z-index:10;background:#050b12eF;backdrop-filter:blur(14px);border-bottom:1px solid #193044;padding:15px 0}.brand{display:flex;align-items:center;gap:12px;font-size:1.18rem;font-weight:950;letter-spacing:.4px}.brand span:first-child{color:var(--green)}.brand .pill{margin-left:auto}.hero{position:relative;overflow:hidden;padding:55px 0 42px}.hero:after{content:'⚽';position:absolute;right:5%;top:0;font-size:clamp(150px,25vw,300px);opacity:.045;transform:rotate(-18deg);pointer-events:none}.hero .green{font-size:.75rem;letter-spacing:2.2px;font-weight:900;text-transform:uppercase}.hero h1{font-size:clamp(2.5rem,6.3vw,5rem);line-height:.99;letter-spacing:-2.8px;margin:15px 0 18px;max-width:800px}.green{color:var(--green)}.muted{color:var(--muted);font-size:.91rem}.hero p{max-width:690px;font-size:1.05rem}.grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:20px;padding-bottom:48px}.panel,.match{background:linear-gradient(145deg,#0d2435f5,#07121df5);border:1px solid var(--line);border-radius:20px;padding:22px;margin-bottom:16px;box-shadow:0 14px 35px #0002}.panel h2{margin:0 0 5px;font-size:1.2rem;letter-spacing:-.3px}.panel>p{margin-top:5px}.field{display:grid;gap:7px;margin:14px 0}label{font-size:.84rem;color:#d8e4ed;font-weight:750}input{background:#050e17;border:1px solid #29475b;color:white;border-radius:11px;padding:13px 14px;font:inherit;width:100%;outline:none}input:focus{border-color:var(--green);box-shadow:0 0 0 3px #53ffa11c}button{border:0;border-radius:11px;padding:12px 15px;font:inherit;font-weight:850;cursor:pointer;transition:transform .16s,filter .16s}button:hover{filter:brightness(1.07);transform:translateY(-1px)}button:disabled{opacity:.55;cursor:wait;transform:none}.primary{background:linear-gradient(135deg,#6bffad,#22d985);color:#03140b;box-shadow:0 5px 18px #22d98520}.secondary{background:#10283a;border:1px solid #2a4a5f;color:white}.actions{display:flex;gap:9px}.actions button{flex:1}.notice{padding:12px 14px;border-radius:12px;background:#0d2637;border:1px solid #29475b;margin-top:13px;font-size:.87rem;overflow-wrap:anywhere}.error{background:#321820;border-color:#76333c}.good{background:#0b2b1d;border-color:#1b6844}.hidden{display:none!important}.balance{font-size:clamp(2rem,4vw,2.8rem);color:var(--green);font-weight:950;letter-spacing:-1px}.teams{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:18px 0;font-weight:900;font-size:1.03rem}.teams span:nth-child(2){font-size:.75rem;color:#8ba5b7;letter-spacing:1px}.choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.choice{background:#10283a;color:#edf7ff;border:1px solid #2a4a5f;font-size:.82rem;padding:12px 7px;overflow-wrap:anywhere}.choice.selected{background:#0b3928;border-color:var(--green);color:#8bffc0;box-shadow:inset 0 0 0 1px #53ffa133}.pill{display:inline-flex;align-items:center;color:#7bffb5;background:#09291d;border:1px solid #226b4b;border-radius:99px;padding:5px 9px;font-size:.69rem;font-weight:900;letter-spacing:.4px}.match{padding:19px;margin-bottom:13px}.match>div:first-child{font-size:.86rem;color:#d7e5ee}.match .field{margin:13px 0}.match .primary{margin-top:4px}.small{font-size:.77rem;color:var(--muted)}.betrow{border-top:1px solid var(--line);padding:13px 0;font-size:.88rem}.betrow:first-child{border-top:0}.betrow b{display:block;margin-bottom:3px}.panel h2:before{color:var(--green)}footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.82rem;background:#03080e}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.subhead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.section-tag{font-size:.7rem;color:var(--green);font-weight:900;letter-spacing:1px}.rules{border-color:#1d5c43;background:linear-gradient(145deg,#0b2a21,#081721)}@media(max-width:800px){.grid{grid-template-columns:1fr}.hero{padding-top:42px}.hero h1{letter-spacing:-1.7px}.panel{padding:18px}}@media(max-width:480px){.wrap{width:94%}.actions{flex-direction:column}.actions button{width:100%}.choices{grid-template-columns:1fr}.teams{font-size:.9rem}.hero h1{font-size:2.5rem}.brand{font-size:1rem}.panel,.match{border-radius:16px;padding:15px}}
-</style></head><body><header><div class="wrap brand"><span>⚽ ZONAPICK RD</span><span class="pill">MODO PRÁCTICA · SIN DINERO REAL</span></div></header>
-<main class="wrap"><section class="hero"><div class="green">⚡ TU CANCHA DE PRONÓSTICOS</div><h1>Analiza el partido.<br><span class="green">Juega por puntos.</span></h1><p class="muted">Crea tu cuenta, recibe 100 puntos virtuales y pon a prueba tus pronósticos deportivos. Lleva tu saldo y revisa tus selecciones desde un solo lugar.</p><div class="section-tag">✓ GRATIS PARA PRACTICAR &nbsp; · &nbsp; ✓ SIN DEPÓSITOS &nbsp; · &nbsp; ✓ SIN RETIROS</div></section>
-<div class="grid"><div><section class="panel" id="authPanel"><h2>🔐 Tu cuenta</h2><p class="muted">Regístrate o inicia sesión.</p><div class="field"><label for="email">Correo electrónico</label><input id="email" type="email" autocomplete="email" placeholder="tu@correo.com"></div><div class="field"><label for="password">Contraseña (mínimo 8 caracteres)</label><input id="password" type="password" minlength="8" autocomplete="current-password"></div><div class="actions"><button class="primary" id="signup">Crear cuenta</button><button class="secondary" id="login">Iniciar sesión</button></div><div id="authMsg" class="notice">Configura la URL y la clave pública de Supabase siguiendo LEEME.txt.</div></section>
-<section class="panel hidden" id="account"><div style="display:flex;justify-content:space-between;gap:8px"><div><h2>👤 Mi cuenta</h2><div id="userEmail" class="muted"></div></div><button id="logout" class="secondary">Salir</button></div><p class="muted">Saldo de práctica</p><div class="balance"><span id="balance">—</span> puntos</div><div id="accountMsg" class="notice">Saldo virtual, no es dinero real.</div></section>
-<section class="panel"><div class="subhead"><h2>⚽ Partidos disponibles</h2><span class="pill">PUNTOS VIRTUALES</span></div><p class="muted">Los partidos y cuotas iniciales son de demostración. El administrador debe actualizarlos antes de publicar datos reales.</p><div id="matches"><div class="notice">Inicia sesión para cargar partidos.</div></div></section></div>
-<aside><section class="panel"><h2>📋 Mi historial</h2><p class="muted">Tu historial de apuestas virtuales.</p><div id="bets" class="muted">Inicia sesión para ver tu historial.</div></section><section class="panel rules"><h2>🛡️ Juego responsable</h2><p class="muted">Cada cuenta recibe 100 puntos iniciales una sola vez. No hay depósitos, retiros ni premios en dinero. No compartas tu contraseña.</p></section></aside></div></main><footer><div class="wrap">© <span id="year"></span> ZonaPick RD · Proyecto de práctica deportiva. Los puntos virtuales no tienen valor monetario. <span style="display:inline-block;margin-left:8px;color:#53ffa1;font-weight:800">Diseñado por Alex-_-xxvi</span></div></footer>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script>
-const SUPABASE_URL="PEGA_AQUI_TU_SUPABASE_PROJECT_URL";
-const SUPABASE_ANON_KEY="PEGA_AQUI_TU_SUPABASE_ANON_PUBLIC_KEY";
+<!DOCTYPE html>
+<!-- ZonaPick RD | Código organizado y firmado por Alex-_-xxvi -->
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   ZonaPick RD | Juego virtual
+  </title>
+  <style>
+   :root {
+    --bg:#050b12;
+    --panel:#0b1724;
+    --line:#1b3447;
+    --green:#53ffa1;
+    --mint:#19d782;
+    --text:#f4f8fc;
+    --muted:#9db1c2;
+    --blue:#102b40
+}
+* {
+    box-sizing:border-box
+}
+html {
+    scroll-behavior:smooth
+}
+body {
+    margin:0;
+    color:var(--text);
+    font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial;
+    background:radial-gradient(ellipse at 80% -5%,#123f45 0,transparent 32%),radial-gradient(ellipse at 0 20%,#10263c 0,transparent 35%),var(--bg)
+}
+.wrap {
+    width:min(1180px,92%);
+    margin:auto
+}
+header {
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:#050b12eF;
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid #193044;
+    padding:15px 0
+}
+.brand {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:1.18rem;
+    font-weight:950;
+    letter-spacing:.4px
+}
+.brand span:first-child {
+    color:var(--green)
+}
+.brand .pill {
+    margin-left:auto
+}
+.hero {
+    position:relative;
+    overflow:hidden;
+    padding:55px 0 42px
+}
+.hero:after {
+    content:'⚽';
+    position:absolute;
+    right:5%;
+    top:0;
+    font-size:clamp(150px,25vw,300px);
+    opacity:.045;
+    transform:rotate(-18deg);
+    pointer-events:none
+}
+.hero .green {
+    font-size:.75rem;
+    letter-spacing:2.2px;
+    font-weight:900;
+    text-transform:uppercase
+}
+.hero h1 {
+    font-size:clamp(2.5rem,6.3vw,5rem);
+    line-height:.99;
+    letter-spacing:-2.8px;
+    margin:15px 0 18px;
+    max-width:800px
+}
+.green {
+    color:var(--green)
+}
+.muted {
+    color:var(--muted);
+    font-size:.91rem
+}
+.hero p {
+    max-width:690px;
+    font-size:1.05rem
+}
+.grid {
+    display:grid;
+    grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);
+    gap:20px;
+    padding-bottom:48px
+}
+.panel,.match {
+    background:linear-gradient(145deg,#0d2435f5,#07121df5);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:22px;
+    margin-bottom:16px;
+    box-shadow:0 14px 35px #0002
+}
+.panel h2 {
+    margin:0 0 5px;
+    font-size:1.2rem;
+    letter-spacing:-.3px
+}
+.panel>p {
+    margin-top:5px
+}
+.field {
+    display:grid;
+    gap:7px;
+    margin:14px 0
+}
+label {
+    font-size:.84rem;
+    color:#d8e4ed;
+    font-weight:750
+}
+input {
+    background:#050e17;
+    border:1px solid #29475b;
+    color:white;
+    border-radius:11px;
+    padding:13px 14px;
+    font:inherit;
+    width:100%;
+    outline:none
+}
+input:focus {
+    border-color:var(--green);
+    box-shadow:0 0 0 3px #53ffa11c
+}
+button {
+    border:0;
+    border-radius:11px;
+    padding:12px 15px;
+    font:inherit;
+    font-weight:850;
+    cursor:pointer;
+    transition:transform .16s,filter .16s
+}
+button:hover {
+    filter:brightness(1.07);
+    transform:translateY(-1px)
+}
+button:disabled {
+    opacity:.55;
+    cursor:wait;
+    transform:none
+}
+.primary {
+    background:linear-gradient(135deg,#6bffad,#22d985);
+    color:#03140b;
+    box-shadow:0 5px 18px #22d98520
+}
+.secondary {
+    background:#10283a;
+    border:1px solid #2a4a5f;
+    color:white
+}
+.actions {
+    display:flex;
+    gap:9px
+}
+.actions button {
+    flex:1
+}
+.notice {
+    padding:12px 14px;
+    border-radius:12px;
+    background:#0d2637;
+    border:1px solid #29475b;
+    margin-top:13px;
+    font-size:.87rem;
+    overflow-wrap:anywhere
+}
+.error {
+    background:#321820;
+    border-color:#76333c
+}
+.good {
+    background:#0b2b1d;
+    border-color:#1b6844
+}
+.hidden {
+    display:none!important
+}
+.balance {
+    font-size:clamp(2rem,4vw,2.8rem);
+    color:var(--green);
+    font-weight:950;
+    letter-spacing:-1px
+}
+.teams {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    margin:18px 0;
+    font-weight:900;
+    font-size:1.03rem
+}
+.teams span:nth-child(2) {
+    font-size:.75rem;
+    color:#8ba5b7;
+    letter-spacing:1px
+}
+.choices {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:8px
+}
+.choice {
+    background:#10283a;
+    color:#edf7ff;
+    border:1px solid #2a4a5f;
+    font-size:.82rem;
+    padding:12px 7px;
+    overflow-wrap:anywhere
+}
+.choice.selected {
+    background:#0b3928;
+    border-color:var(--green);
+    color:#8bffc0;
+    box-shadow:inset 0 0 0 1px #53ffa133
+}
+.pill {
+    display:inline-flex;
+    align-items:center;
+    color:#7bffb5;
+    background:#09291d;
+    border:1px solid #226b4b;
+    border-radius:99px;
+    padding:5px 9px;
+    font-size:.69rem;
+    font-weight:900;
+    letter-spacing:.4px
+}
+.match {
+    padding:19px;
+    margin-bottom:13px
+}
+.match>div:first-child {
+    font-size:.86rem;
+    color:#d7e5ee
+}
+.match .field {
+    margin:13px 0
+}
+.match .primary {
+    margin-top:4px
+}
+.small {
+    font-size:.77rem;
+    color:var(--muted)
+}
+.betrow {
+    border-top:1px solid var(--line);
+    padding:13px 0;
+    font-size:.88rem
+}
+.betrow:first-child {
+    border-top:0
+}
+.betrow b {
+    display:block;
+    margin-bottom:3px
+}
+.panel h2:before {
+    color:var(--green)
+}
+footer {
+    border-top:1px solid var(--line);
+    padding:25px 0;
+    color:var(--muted);
+    font-size:.82rem;
+    background:#03080e
+}
+.foot {
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    flex-wrap:wrap
+}
+.subhead {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    flex-wrap:wrap
+}
+.section-tag {
+    font-size:.7rem;
+    color:var(--green);
+    font-weight:900;
+    letter-spacing:1px
+}
+.rules {
+    border-color:#1d5c43;
+    background:linear-gradient(145deg,#0b2a21,#081721)
+}
+@media(max-width:800px) {
+    .grid {
+        grid-template-columns:1fr
+    }
+    .hero {
+        padding-top:42px
+    }
+    .hero h1 {
+        letter-spacing:-1.7px
+    }
+    .panel {
+        padding:18px
+    }
+}
+@media(max-width:480px) {
+    .wrap {
+        width:94%
+    }
+    .actions {
+        flex-direction:column
+    }
+    .actions button {
+        width:100%
+    }
+    .choices {
+        grid-template-columns:1fr
+    }
+    .teams {
+        font-size:.9rem
+    }
+    .hero h1 {
+        font-size:2.5rem
+    }
+    .brand {
+        font-size:1rem
+    }
+    .panel,.match {
+        border-radius:16px;
+        padding:15px
+    }
+}
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="wrap brand">
+    <span>
+     ⚽ ZONAPICK RD
+    </span>
+    <span class="pill">
+     MODO PR&Aacute;CTICA &middot; SIN DINERO REAL
+    </span>
+   </div>
+  </header>
+  <main class="wrap">
+   <section class="hero">
+    <div class="green">
+     ⚡ TU CANCHA DE PRON&Oacute;STICOS
+    </div>
+    <h1>
+     Analiza el partido.
+     <br/>
+     <span class="green">
+      Juega por puntos.
+     </span>
+    </h1>
+    <p class="muted">
+     Crea tu cuenta, recibe 100 puntos virtuales y pon a prueba tus pron&oacute;sticos deportivos. Lleva tu saldo y revisa tus selecciones desde un solo lugar.
+    </p>
+    <div class="section-tag">
+     &checkmark; GRATIS PARA PRACTICAR &nbsp; &middot; &nbsp; &checkmark; SIN DEP&Oacute;SITOS &nbsp; &middot; &nbsp; &checkmark; SIN RETIROS
+    </div>
+   </section>
+   <div class="grid">
+    <div>
+     <section class="panel" id="authPanel">
+      <h2>
+       🔐 Tu cuenta
+      </h2>
+      <p class="muted">
+       Reg&iacute;strate o inicia sesi&oacute;n.
+      </p>
+      <div class="field">
+       <label for="email">
+        Correo electr&oacute;nico
+       </label>
+       <input autocomplete="email" id="email" placeholder="tu@correo.com" type="email"/>
+      </div>
+      <div class="field">
+       <label for="password">
+        Contrase&ntilde;a (m&iacute;nimo 8 caracteres)
+       </label>
+       <input autocomplete="current-password" id="password" minlength="8" type="password"/>
+      </div>
+      <div class="actions">
+       <button class="primary" id="signup">
+        Crear cuenta
+       </button>
+       <button class="secondary" id="login">
+        Iniciar sesi&oacute;n
+       </button>
+      </div>
+      <div class="notice" id="authMsg">
+       Configura la URL y la clave p&uacute;blica de Supabase siguiendo LEEME.txt.
+      </div>
+     </section>
+     <section class="panel hidden" id="account">
+      <div style="display:flex;justify-content:space-between;gap:8px">
+       <div>
+        <h2>
+         👤 Mi cuenta
+        </h2>
+        <div class="muted" id="userEmail">
+        </div>
+       </div>
+       <button class="secondary" id="logout">
+        Salir
+       </button>
+      </div>
+      <p class="muted">
+       Saldo de pr&aacute;ctica
+      </p>
+      <div class="balance">
+       <span id="balance">
+        &mdash;
+       </span>
+       puntos
+      </div>
+      <div class="notice" id="accountMsg">
+       Saldo virtual, no es dinero real.
+      </div>
+     </section>
+     <section class="panel">
+      <div class="subhead">
+       <h2>
+        ⚽ Partidos disponibles
+       </h2>
+       <span class="pill">
+        PUNTOS VIRTUALES
+       </span>
+      </div>
+      <p class="muted">
+       Los partidos y cuotas iniciales son de demostraci&oacute;n. El administrador debe actualizarlos antes de publicar datos reales.
+      </p>
+      <div id="matches">
+       <div class="notice">
+        Inicia sesi&oacute;n para cargar partidos.
+       </div>
+      </div>
+     </section>
+    </div>
+    <aside>
+     <section class="panel">
+      <h2>
+       📋 Mi historial
+      </h2>
+      <p class="muted">
+       Tu historial de apuestas virtuales.
+      </p>
+      <div class="muted" id="bets">
+       Inicia sesi&oacute;n para ver tu historial.
+      </div>
+     </section>
+     <section class="panel rules">
+      <h2>
+       🛡️ Juego responsable
+      </h2>
+      <p class="muted">
+       Cada cuenta recibe 100 puntos iniciales una sola vez. No hay dep&oacute;sitos, retiros ni premios en dinero. No compartas tu contrase&ntilde;a.
+      </p>
+     </section>
+    </aside>
+   </div>
+  </main>
+  <footer>
+   <div class="wrap">
+    &copy;
+    <span id="year">
+    </span>
+    ZonaPick RD &middot; Proyecto de pr&aacute;ctica deportiva. Los puntos virtuales no tienen valor monetario.
+    <span style="display:inline-block;margin-left:8px;color:#53ffa1;font-weight:800">
+     Dise&ntilde;ado por Alex-_-xxvi
+    </span>
+   </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
+  </script>
+  <script>
+   const SUPABASE_URL="PEGA_AQUI_LA_PROJECT_URL_DE_SUPABASE";
+const SUPABASE_ANON_KEY="sb_publishable_MMI0g5GWlNrsFmzBzUZ8YA_MBHsniUn";
 const $=id=>document.getElementById(id);$("year").textContent=new Date().getFullYear();
 const configured=SUPABASE_URL.startsWith("https://")&&!SUPABASE_URL.includes("PEGA_AQUI")&&!SUPABASE_ANON_KEY.includes("PEGA_AQUI");
 let sb=null,user=null,chosen={};
@@ -24,4 +514,6 @@ async function balance(){let {data,error}=await sb.from("virtual_wallets").selec
 async function loadMatches(){let {data,error}=await sb.from("virtual_matches").select("id,home_team,away_team,league,starts_at,odds_home,odds_draw,odds_away").eq("is_open",true).order("starts_at");if(error){$("matches").innerHTML='<div class="notice error">Error cargando partidos. Revisa la configuración SQL.</div>';return}if(!data.length){$("matches").textContent="No hay partidos abiertos.";return}$("matches").innerHTML="";data.forEach(m=>{let c=document.createElement("article");c.className="match";c.innerHTML=`<div style="display:flex;justify-content:space-between;gap:8px"><b>${esc(m.league)}</b><span class="pill">PRÁCTICA</span></div><div class="teams"><span>${esc(m.home_team)}</span><span class="muted">VS</span><span>${esc(m.away_team)}</span></div><div class="small">${m.starts_at?new Date(m.starts_at).toLocaleString("es-DO"):"Horario por definir"}</div><div class="field"><label>Tu selección</label><div class="choices"></div></div><div class="field"><label>Puntos a utilizar</label><input type="number" min="1" max="100000" step="1" value="10"></div><button class="primary" style="width:100%">Guardar selección virtual</button><p class="small">Cuotas demostrativas, no reales.</p>`;let opts=[["home",m.home_team,m.odds_home],["draw","Empate",m.odds_draw],["away",m.away_team,m.odds_away]],choices=c.querySelector(".choices");opts.forEach(([key,label,odd])=>{let b=document.createElement("button");b.className="choice";b.textContent=`${label} · ${Number(odd).toFixed(2)}`;b.onclick=()=>{chosen[m.id]=key;choices.querySelectorAll("button").forEach(x=>x.classList.remove("selected"));b.classList.add("selected")};choices.appendChild(b)});c.querySelector(".primary").onclick=async()=>{if(!chosen[m.id])return alert("Selecciona un resultado.");let stake=Number(c.querySelector("input").value);if(!Number.isSafeInteger(stake)||stake<1)return alert("Usa un número entero de puntos mayor que cero.");let b=c.querySelector(".primary");b.disabled=true;b.textContent="Guardando…";let {error}=await sb.rpc("place_virtual_bet",{p_match_id:m.id,p_selection:chosen[m.id],p_stake:stake});b.disabled=false;b.textContent="Guardar selección virtual";if(error)return alert("No se pudo guardar: "+error.message);alert("¡Selección virtual guardada!");await balance();await loadBets()};$("matches").appendChild(c)})}
 async function loadBets(){let {data,error}=await sb.from("virtual_bets").select("selection,stake,odds_snapshot,status,created_at,virtual_matches(home_team,away_team)").order("created_at",{ascending:false}).limit(30);if(error){$("bets").textContent="No se pudo cargar el historial.";return}if(!data.length){$("bets").textContent="Todavía no tienes selecciones.";return}$("bets").innerHTML="";data.forEach(b=>{let m=b.virtual_matches||{},sel=b.selection==="home"?m.home_team:b.selection==="away"?m.away_team:"Empate",r=document.createElement("div");r.className="betrow";r.innerHTML=`<b>${esc(m.home_team||"Partido")} vs ${esc(m.away_team||"")}</b><div>${esc(sel)} · ${b.stake} puntos</div><div class="small">Cuota guardada ${Number(b.odds_snapshot).toFixed(2)} · ${esc(b.status)} · ${new Date(b.created_at).toLocaleString("es-DO")}</div>`;$("bets").appendChild(r)})}
 function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-</script></body></html>
+  </script>
+ </body>
+</html>
